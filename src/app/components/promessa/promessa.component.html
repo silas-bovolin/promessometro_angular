@@ -1,0 +1,48 @@
+<mat-expansion-panel 
+>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{ promessa.titulo }}
+    </mat-panel-title>
+    <mat-panel-description>
+      {{ promessa.descricao }}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  
+  <div class="progress-container">
+    <mat-progress-bar 
+      mode="determinate" 
+      [value]="promessa.porcentagem"
+    ></mat-progress-bar>
+    <span class="percentage">{{ promessa.porcentagem }}%</span>
+
+  
+  <p class="details">{{ promessa.detalhe }}</p>
+  
+  <ng-container *ngIf="promessa.itens && promessa.itens.length > 0">
+
+    <h4>Detalhamento:</h4>
+    
+    <div class="subitems">
+      <mat-expansion-panel 
+        *ngFor="let item of promessa.itens"
+        class="subitem-panel"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ item.titulo }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <div class="progress-container">
+          <mat-progress-bar 
+            mode="determinate" 
+            [value]="item.porcentagem"
+          ></mat-progress-bar>
+          <span class="percentage">{{ item.porcentagem }}%</span>
+        </div>
+      </mat-expansion-panel>
+    </div>
+  </ng-container>
+  </div>
+</mat-expansion-panel>

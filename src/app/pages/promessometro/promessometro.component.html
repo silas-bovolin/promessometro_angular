@@ -1,0 +1,16 @@
+<div class="promessometro-container">
+    <div class="header">
+      <h1>Promessometro</h1>
+      <p class="subtitle">
+        Acompanhe quais promessas o prefeito Anderson Farias foram cumpridas
+      </p>
+    </div>
+    
+    <div class="promises-list">
+      <app-promessa
+        *ngFor="let promessa of promessas" 
+        [promessa]="promessa"
+      ></app-promessa>
+    </div>
+  </div>
+  

@@ -1,0 +1,49 @@
+<div class="login-container">
+    <mat-card class="login-card">
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+        <mat-card-subtitle>
+          Entre com suas credenciais para acessar o sistema
+        </mat-card-subtitle>
+      </mat-card-header>
+      
+      <form (ngSubmit)="onSubmit()">
+        <mat-card-content>
+              <label>Email</label>
+              <div class="full-width">
+                <input class="full-width input-login" formControlName="email" type="email">
+              </div>
+              
+              <div *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.hasError('required')">
+                Email é obrigatório
+              </div>
+              <div *ngIf="loginForm.get('email')?.hasError('email')">
+                Email inválido
+              </div>
+          
+              <label>Senha</label>
+              <div class="full-width">
+                <input 
+                class="full-width input-login"
+                formControlName="password" 
+                type="password"
+              >
+              </div>
+              <div *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.hasError('required')">
+                Senha é obrigatória
+              </div>
+        </mat-card-content>
+        <mat-card-content>
+        <mat-card-actions>
+          <button 
+            type="submit" 
+            class="full-width"
+          >
+            Entrar
+          </button>
+        </mat-card-actions>
+      </mat-card-content>
+      </form>
+    </mat-card>
+  </div>
+  
