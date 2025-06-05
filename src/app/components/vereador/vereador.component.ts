@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Vereador } from '../../models/vereador.model';
 import { MatCard, MatCardHeader, MatCardSubtitle, MatCardTitle } from '@angular/material/card';
+import { VereadorResponse } from '../../dtos/responses/vereador_response.model';
 
 @Component({
   selector: 'app-vereador',
@@ -9,5 +9,5 @@ import { MatCard, MatCardHeader, MatCardSubtitle, MatCardTitle } from '@angular/
   styleUrl: './vereador.component.css'
 })
 export class VereadorComponent {
-  @Input() vereador!: Vereador
+  @Input() vereador!: VereadorResponse
 }

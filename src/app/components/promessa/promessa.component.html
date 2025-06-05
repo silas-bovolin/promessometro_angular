@@ -1,48 +1,52 @@
-<mat-expansion-panel 
->
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      {{ promessa.titulo }}
-    </mat-panel-title>
-    <mat-panel-description>
-      {{ promessa.descricao }}
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  
-  <div class="progress-container">
-    <mat-progress-bar 
-      mode="determinate" 
-      [value]="promessa.porcentagem"
-    ></mat-progress-bar>
-    <span class="percentage">{{ promessa.porcentagem }}%</span>
-
-  
-  <p class="details">{{ promessa.detalhe }}</p>
-  
-  <ng-container *ngIf="promessa.itens && promessa.itens.length > 0">
-
-    <h4>Detalhamento:</h4>
-    
-    <div class="subitems">
-      <mat-expansion-panel 
-        *ngFor="let item of promessa.itens"
-        class="subitem-panel"
-      >
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            {{ item.titulo }}
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        
-        <div class="progress-container">
-          <mat-progress-bar 
-            mode="determinate" 
-            [value]="item.porcentagem"
-          ></mat-progress-bar>
-          <span class="percentage">{{ item.porcentagem }}%</span>
-        </div>
-      </mat-expansion-panel>
+<div class="promise-card" [class.expanded]="isExpanded">
+  <div class="promise-header" (click)="toggleExpand()">
+    <div class="promise-info">
+      <div class="promise-icon">
+      </div>
+      <div class="promise-title">
+        <h3>{{ promessa.Titulo }}</h3>
+        <p>{{ promessa.Descricao }}</p>
+      </div>
     </div>
-  </ng-container>
+    <div class="promise-progress">
+      <div class="progress-value">{{ promessa.ConclusaoPorcentagem }}%</div>
+      <div class="progress-label">PROGRESSO</div>
+      <i class="icon-chevron" [class.up]="isExpanded"></i>
+    </div>
   </div>
-</mat-expansion-panel>
+  
+  <div class="promise-content" [class.visible]="isExpanded">
+    <div class="progress-bar-container">
+      <div class="progress-bar-label">
+        <span>Progresso Geral</span>
+        <span>{{ promessa.ConclusaoPorcentagem }}%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" [style.width.%]="promessa.ConclusaoPorcentagem"></div>
+      </div>
+    </div>
+    
+    <p class="promise-details">{{ promessa.Descricao }}</p>
+    
+    <div class="subitems" *ngIf="promessa.Fases && promessa.Fases.length > 0">
+      <h4>Detalhamento:</h4>
+      
+      <div class="subitem" *ngFor="let fase of promessa.Fases">
+        <div class="subitem-header" (click)="toggleSubitem(fase.Titulo, $event)">
+          <div class="subitem-title">{{ fase.Titulo }}</div>
+          <div class="subitem-progress">
+            <div class="progress-value">{{ fase.ConclusaoPorcentagem }}%</div>
+            <i class="icon-chevron" [class.up]="isSubitemExpanded(fase.Titulo)"></i>
+          </div>
+        </div>
+        
+        <div class="subitem-content" [class.visible]="isSubitemExpanded(fase.Titulo)">
+          <div class="progress-bar">
+            <div class="progress-bar-fill" [style.width.%]="fase.ConclusaoPorcentagem"></div>
+          </div>
+          <p class="subitem-details">{{ fase.Descricao }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

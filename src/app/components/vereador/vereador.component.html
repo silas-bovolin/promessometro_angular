@@ -1,14 +1,14 @@
 <mat-card class="vereador-card">
     <div class="image-container">
-      <img [src]="vereador.foto" [alt]="vereador.nome" class="vereador-image">
+      <img [src]="'data:image/jpeg;base64,' + vereador.ImagemBase64" [alt]="vereador.Nome" class="vereador-image">
     </div>
     
     <mat-card-header>
-      <mat-card-title>{{ vereador.nome }}</mat-card-title>
+      <mat-card-title>{{ vereador.Nome }}</mat-card-title>
       <mat-card-subtitle>
-        <div>{{ vereador.partido }}</div>
+        <div>{{ vereador.Partido }}</div>
         <div class="blocked-count">
-          {{ vereador.qtdRequerimentosBarrados }} {{ vereador.qtdRequerimentosBarrados === 1 ? 'requerimento barrado' : 'requerimentos barrados' }}
+          {{ vereador.QuantidadeRequerimentosRejeitados }} {{ vereador.QuantidadeRequerimentosRejeitados === 1 ? 'requerimento barrado' : 'requerimentos barrados' }}
         </div>
       </mat-card-subtitle>
     </mat-card-header>
