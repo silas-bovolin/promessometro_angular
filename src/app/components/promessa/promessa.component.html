@@ -3,14 +3,15 @@
     <div class="promise-info">
       <div class="promise-icon">
       </div>
-      <div class="promise-title">
+      <div>
         <h3>{{ promessa.Titulo }}</h3>
         <p>{{ promessa.Descricao }}</p>
       </div>
     </div>
     <div class="promise-progress">
-      <div class="progress-value">{{ promessa.ConclusaoPorcentagem }}%</div>
-      <div class="progress-label">PROGRESSO</div>
+      <div class="circular-progress" [ngStyle]="{ '--progress': promessa.ConclusaoPorcentagem + '%' }">
+        <span class="progress-value">{{ promessa.ConclusaoPorcentagem }}%</span>
+      </div>
       <i class="icon-chevron" [class.up]="isExpanded"></i>
     </div>
   </div>

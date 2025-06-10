@@ -8,7 +8,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
   selector: "app-promessa",
   templateUrl: "./promessa.component.html",
-  styleUrls: ["./promessa.component.css"],
+  styleUrls: ["./promessa.component.scss"],
   imports: [CommonModule, MatIconModule],
   animations: [
     trigger('expandCollapse', [

@@ -9,7 +9,7 @@ import { VereadorResponse } from '../../dtos/responses/vereador_response.model';
   selector: 'app-sigilometro',
   imports: [MatCardModule, NgxChartsModule, VereadorComponent],
   templateUrl: './sigilometro.component.html',
-  styleUrl: './sigilometro.component.css'
+  styleUrl: './sigilometro.component.scss'
 })
 export class SigilometroComponent {
 

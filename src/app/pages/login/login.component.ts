@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   imports: [MatFormFieldModule, MatCardActions,  MatCardContent, MatCardSubtitle, MatCardTitle, MatCardHeader, MatCard, CommonModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   loginForm: FormGroup

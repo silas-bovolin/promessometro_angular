@@ -6,7 +6,7 @@ import { VereadorResponse } from '../../dtos/responses/vereador_response.model';
   selector: 'app-vereador',
   imports: [MatCard, MatCardHeader, MatCardTitle, MatCardSubtitle],
   templateUrl: './vereador.component.html',
-  styleUrl: './vereador.component.css'
+  styleUrl: './vereador.component.scss'
 })
 export class VereadorComponent {
   @Input() vereador!: VereadorResponse

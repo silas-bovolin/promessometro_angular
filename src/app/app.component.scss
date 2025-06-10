@@ -1,0 +1,17 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #0d0d1a;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(to right, #0a0a17, #121229);
+  background-size: 20px 20px, 20px 20px, 100% 100%;
+  background-repeat: repeat, repeat, no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
