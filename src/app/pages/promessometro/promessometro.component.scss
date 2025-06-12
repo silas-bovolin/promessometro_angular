@@ -1,3 +1,18 @@
+.app-container {
+  min-height: 100vh;
+  background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+      url("../../../assets/estaiada.jpg");
+  background-repeat: repeat, repeat, no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
 .promessometro-container {
   max-width: 1100px;
   margin: 0 auto;

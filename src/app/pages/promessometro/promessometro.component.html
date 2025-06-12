@@ -1,14 +1,18 @@
-<div class="promessometro-container">
-  <div class="header">
-    <h1><span class="letraAzul">Promess</span><span class="letraAmarela">ômetro</span></h1>
-    <p>Acompanhe quais promessas da prefeitura de São José dos Campos foram cumpridas</p>
-    <div class="gradient-separator"></div>
-  </div>
+<div class="app-container">
+    <div class="container">
+      <div class="promessometro-container">
+        <div class="header">
+          <h1><span class="letraAzul">Promess</span><span class="letraAmarela">ômetro</span></h1>
+          <p>Acompanhe quais promessas da prefeitura de São José dos Campos foram cumpridas</p>
+          <div class="gradient-separator"></div>
+        </div>
   
-  <div class="promises-list">
-      <app-promessa
-        *ngFor="let promessa of promessas" 
-        [promessa]="promessa"
-      ></app-promessa>
-  </div>
+        <div class="promises-list">
+          <app-promessa
+            *ngFor="let promessa of promessas" 
+            [promessa]="promessa"
+          ></app-promessa>
+        </div>
+      </div>
+    </div>
 </div>
