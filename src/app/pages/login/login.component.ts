@@ -44,7 +44,7 @@ export class LoginComponent {
     //   }
     // });
 
-    if (request.email == 'adm@gmail.com' && request.senha == 'admin') {
+    if (request.email.toLowerCase()== 'adm@gmail.com' && request.senha == 'admin') {
       this.processarLogin('X');
     }
     else {
