@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { VereadorComponent } from '../../components/vereador/vereador.component';
-import { SigilometroService } from '../../services/sigilometro.service';
+import { SigilometroService } from '../../services/sigilometro/sigilometro.service';
 import { VereadorResponse } from '../../dtos/responses/vereador_response.model';
 
 @Component({

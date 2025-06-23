@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SigilometroService } from './sigilometro.service';
+import { SigilometroService } from '../sigilometro/sigilometro.service';
 
 describe('SigilometroService', () => {
   let service: SigilometroService;

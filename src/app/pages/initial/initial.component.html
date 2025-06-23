@@ -1,0 +1,15 @@
+<div class="tela">
+    <h1><span class="letraAzul">Promess</span><span class="letraAmarela">ômetro</span></h1>
+    <div class="telacard">
+        <div class="container">
+            <nav>
+                <button (click)="exibeLogin()" [class.ativo]="mostrarLogin">Login</button>
+                <button (click)="exibeCadastro()" [class.ativo]="!mostrarLogin">Cadastro</button>
+            </nav>
+            <div>
+                <app-login *ngIf="mostrarLogin"></app-login>
+                <app-cadastro *ngIf="!mostrarLogin"></app-cadastro>
+            </div>
+        </div>
+    </div>
+</div>

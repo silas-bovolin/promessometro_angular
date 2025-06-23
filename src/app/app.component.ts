@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
-import { PromessometroComponent } from './pages/promessometro/promessometro.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [PromessometroComponent],
+  imports: [RouterModule],
   templateUrl: `./app.component.html`,
   styleUrls: ["./app.component.scss"]
 })

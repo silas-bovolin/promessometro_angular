@@ -1,0 +1,38 @@
+<div>
+    <h3>Registre-se</h3>
+    <form [formGroup]="cadastroForm">
+        <div class="divisao">
+            <div class="divlabel">
+                <label for="nome">Nome:</label>
+            </div>
+            <input type="text" id="nome" placeholder="Insira seu nome" formControlName="nome"/>
+        </div>
+        <div class="divisao">
+            <div class="divlabel">
+                <label for="email">E-mail:</label>
+            </div>
+            <input type="text" id="email" placeholder="email@gmail.com" formControlName="email">
+        </div>
+        <div class="divisao">
+            <div class="divlabel">
+                <label for="telefone">Telefone:</label>
+            </div>
+            <input type="text" id="telefone" placeholder="+55 (12) 00000-0000" formControlName="telefone">
+        </div>
+        <div class="divisao">
+            <div class="divlabel">
+                <label for="senha">Senha:</label>
+            </div>
+            <input type="password" id="senha" placeholder="******" formControlName="senha">
+        </div>
+        <div class="divisao">
+            <div class="divlabel">
+                <label for="confirmarSenha">Confirmar Senha:</label>
+            </div>
+            <input type="password" id="confirmarSenha" placeholder="******" formControlName="confirmarSenha">
+        </div>
+        <div class="divisao">
+            <button type="button">Cadastrar</button>
+        </div>
+    </form>
+</div>
