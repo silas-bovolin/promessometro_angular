@@ -1,16 +1,16 @@
-<mat-card class="vereador-card">
+<div class="chart-container">
     <div class="image-container">
       <img [src]="'data:image/jpeg;base64,' + vereador.ImagemBase64" [alt]="vereador.Nome" class="vereador-image">
     </div>
     
-    <mat-card-header>
-      <mat-card-title>{{ vereador.Nome }}</mat-card-title>
-      <mat-card-subtitle>
+    <div class="center">
+      <div>{{ vereador.Nome }}</div>
+      <div>
         <div>{{ vereador.Partido }}</div>
         <div class="blocked-count">
           {{ vereador.QuantidadeRequerimentosRejeitados }} {{ vereador.QuantidadeRequerimentosRejeitados === 1 ? 'requerimento barrado' : 'requerimentos barrados' }}
         </div>
-      </mat-card-subtitle>
-    </mat-card-header>
-  </mat-card>
+      </div>
+    </div>
+  </div>
   

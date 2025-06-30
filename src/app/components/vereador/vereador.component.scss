@@ -7,6 +7,16 @@
     width: 100%;
     padding-top: 100%;
     overflow: hidden;
+    border-radius: 1px;
+}
+
+.center {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
 }
   
 .vereador-image {
@@ -14,12 +24,30 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .blocked-count {
     color: #ef4444;
     font-weight: 500;
     margin-top: 4px;
+}
+
+.chart-container {
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: rgba(12, 26, 43, 0.85);
+    color: #ccefff;
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff60;
+    animation: borderGlow 1s infinite alternate;
+}
+
+@keyframes borderGlow {
+  from {
+    border: 1px solid #036373;
+  }
+  to {
+    border: 1px solid #06b6d4;
+  }
 }

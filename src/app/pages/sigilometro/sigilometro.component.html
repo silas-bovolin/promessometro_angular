@@ -1,40 +1,42 @@
+<div class="app-container">
 <div class="sigilometro-container">
-    <div class="header">
-      <h1>Sigilômetro</h1>
-      <p class="subtitle">
-        Descubra a quantidade de requerimentos rejeitados por cada vereador
-      </p>
+  <div class="header">
+    <h1><span class="letraAzul">Sigil</span><span class="letraAmarela">ômetro</span></h1>
+    <p class="subtitle">
+      Descubra a quantidade de requerimentos rejeitados por cada vereador
+    </p>
+  </div>
+    
+  <div class="chart-container">
+    <div class="informacoes-gerais">
+      <div>Visão Geral dos Requerimentos</div>
+      <div>
+        Total de requerimentos: {{ qtdRequerimentosAceitos + qtdRequerimentosRejeitados }}
+        ({{ qtdRequerimentosRejeitados }} rejetados, {{ qtdRequerimentosAceitos }} aceitos)
+      </div>
     </div>
-    
-    <mat-card class="chart-card">
-      <mat-card-header>
-        <mat-card-title>Visão Geral dos Requerimentos</mat-card-title>
-        <mat-card-subtitle>
-          Total de requerimentos: {{ qtdRequerimentosAceitos + qtdRequerimentosRejeitados }}
-          ({{ qtdRequerimentosRejeitados }} rejetados, {{ qtdRequerimentosAceitos }} aceitos)
-        </mat-card-subtitle>
-      </mat-card-header>
       
-      <mat-card-content>
-        <div class="chart-container">
-          <ngx-charts-pie-chart
-            [results]="chartData"
-            [legend]="true"
-            [doughnut]="true"
-            [legendTitle]="'Legenda'"
-          >
-          </ngx-charts-pie-chart>
-        </div>
-      </mat-card-content>
-    </mat-card>
-    
-    <h2 class="section-title">Vereadores</h2>
-    
-    <div class="vereador-grid">
-      <app-vereador
-        *ngFor="let vereador of vereadores" 
-        [vereador]="vereador"
-      ></app-vereador>
+    <div >
+      <div>
+        <ngx-charts-pie-chart
+          [results]="chartData"
+          [legend]="true"
+          [doughnut]="true"
+          [legendTitle]="'Legenda'"
+          [customColors]="coresGrafico"
+        >
+        </ngx-charts-pie-chart>
+      </div>
     </div>
   </div>
-  
+    
+  <h2 class="section-title">Vereadores</h2>
+    
+  <div class="vereador-grid">
+    <app-vereador
+      *ngFor="let vereador of vereadores" 
+      [vereador]="vereador"
+    ></app-vereador>
+  </div>
+</div>
+</div>

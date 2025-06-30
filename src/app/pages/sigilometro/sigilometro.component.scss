@@ -1,28 +1,80 @@
 .sigilometro-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+      url("../../../assets/estaiada.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.subtitle {
+  color: #e5f0f5;
+    font-size: 1.25rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.header{
+  text-align: center;
+}
+
+  h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   }
 
-  .header{
-    text-align: center;
+.chart-container {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: 10px 10px;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  transition: border-width 0.6s linear;
+  animation: borderGlow 1s infinite alternate;
+  box-shadow: 1px 1px rgba(103, 232, 249, 0.7);
+  transition: box-shadow 0.6s linear;
+}
+.informacoes-gerais {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+@keyframes borderGlow {
+  from {
+    border: 1px solid #036373;
+  }
+  to {
+    border: 1px solid #06b6d4;
+  }
+}
+  
+.vereador-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  padding-bottom: 16px;
+    
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
   }
   
-  .vereador-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 16px;
-    padding-bottom: 16px;
-    
-    @media (min-width: 600px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    @media (min-width: 960px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    
-    @media (min-width: 1280px) {
-      grid-template-columns: repeat(5, 1fr);
-    }
+  @media (min-width: 960px) {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
+    
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
