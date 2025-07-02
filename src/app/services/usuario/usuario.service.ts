@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { BaseService } from '../base/base.service';
 import { LoginResponse } from '../../dtos/responses/login_response.model';
 import { LoginRequest } from '../../dtos/requests/login_request.model';
+import { CadastroRequest } from '../../dtos/requests/cadastro_request.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,11 @@ export class UsuarioService extends BaseService {
     return this.post<LoginRequest, LoginResponse>(
         '/Usuario/Login', 
         request);
+  }
+
+  cadastro(request: CadastroRequest) : Observable<any> {
+    return this.post<CadastroRequest, any>(
+      '/Usuario/Cadastro',
+      request);
   }
 }

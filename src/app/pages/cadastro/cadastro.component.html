@@ -1,6 +1,6 @@
 <div>
     <h3>Registre-se</h3>
-    <form [formGroup]="cadastroForm">
+    <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
         <div class="divisao">
             <div class="divlabel">
                 <label for="nome">Nome:</label>
@@ -15,9 +15,9 @@
         </div>
         <div class="divisao">
             <div class="divlabel">
-                <label for="telefone">Telefone:</label>
+                <label for="telefone">Celular:</label>
             </div>
-            <input type="text" id="telefone" placeholder="+55 (12) 00000-0000" formControlName="telefone">
+            <input type="text" id="telefone" placeholder="+55 (12) 00000-0000" formControlName="telefone" mask="+00 (00) 00000-0000">
         </div>
         <div class="divisao">
             <div class="divlabel">
@@ -31,8 +31,15 @@
             </div>
             <input type="password" id="confirmarSenha" placeholder="******" formControlName="confirmarSenha">
         </div>
-        <div class="divisao">
-            <button type="button">Cadastrar</button>
+        <div class="divisaoPoliticas">
+            <input type="checkbox" id="aceitouOsTermos" formControlName="aceitouOsTermos">
+            <p class="politicaDeTermos">Ao continuar, estou ciente da Política de Privacidade do Promessômetro e dos Termos e Condições de Uso do Site.</p>
         </div>
+        
+        
+        <div class="divisao">
+            <button type="submit">Cadastrar</button>
+        </div>
+        <p class="mensagemErro" *ngIf="message">{{ message }}</p>
     </form>
 </div>

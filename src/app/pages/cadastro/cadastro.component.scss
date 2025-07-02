@@ -8,7 +8,6 @@
 
 input, button {
     background-color: #0a0e1a;
-    border: none;
     border: 1px solid #06b6d4;
     border-radius: 5px;
     box-shadow: 0 0 5px #00ffff60;
@@ -19,6 +18,18 @@ input, button {
 input {
     width: 97%;
     padding: 10px 0px 10px 7px;
+}
+
+input[type="checkbox"] {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 20px;
+    accent-color: #06b6d4;
 }
 
 button {
@@ -38,4 +49,20 @@ button:hover {
 
 h3 {
     text-align: center;
+}
+
+.mensagemErro {
+    text-align: center;
+    color: #fa1515;
+}
+
+.politicaDeTermos {
+    font-size: 13px;
+    color: #ccefff;
+    line-height: 1.5;
+}
+
+.divisaoPoliticas {
+    display:inline-flex;
+    align-items:center;
 }
