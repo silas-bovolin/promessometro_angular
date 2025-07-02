@@ -5,8 +5,7 @@
     background-color: #010608;
     background-size: 20px 20px;
     border-bottom: 1px solid #00ffff3a;
-
-    @media (max-width: 600px) {
+    @media (max-width: 1000px) {
         justify-content: center;
     }
   }
