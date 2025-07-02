@@ -24,9 +24,10 @@ export class SigilometroComponent {
     { name: this.labelRejeitados, value: '#facc15' },
     { name: this.labelAceitos, value: '#00e5ff' }
   ];
-  qtdRequerimentosAceitos: number = 1
-  qtdRequerimentosRejeitados: number = 1
-  
+  qtdRequerimentosAceitos: number = 0
+  qtdRequerimentosRejeitados: number = 0
+  legendPosition: LegendPosition = LegendPosition.Below
+
   ngOnInit() {
     this.sigilometroService.getSigilometro()
     .subscribe({

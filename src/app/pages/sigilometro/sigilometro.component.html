@@ -17,16 +17,14 @@
     </div>
       
     <div>
-      <div>
-        <ngx-charts-pie-chart
-          [results]="chartData"
-          [legend]="true"
-          [doughnut]="true"
-          [legendTitle]="'Legenda'"
-          [customColors]="coresGrafico"
-        >
-        </ngx-charts-pie-chart>
-      </div>
+      <ngx-charts-pie-chart
+        [results]="chartData"
+        [legend]="true"
+        [legendPosition]="legendPosition"
+        [doughnut]="true"
+        [legendTitle]="'Legenda'"
+        [customColors]="coresGrafico">
+      </ngx-charts-pie-chart>
     </div>
   </div>
     
