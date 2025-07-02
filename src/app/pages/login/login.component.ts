@@ -37,7 +37,7 @@ export class LoginComponent {
     const response = this.usuarioService.login(request);
     response.subscribe({
       next: value => {
-        this.processarLogin(value.Token);
+        this.processarLogin(value.token);
       },
       error: value => {
         this.message = value.name;

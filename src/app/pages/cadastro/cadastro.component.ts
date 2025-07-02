@@ -103,11 +103,14 @@ export class CadastroComponent {
   }
 
   login(request: CadastroRequest) {
-    const loginRequest: LoginRequest = request;
+    const loginRequest: LoginRequest = {
+      email: request.email,
+      senha: request.senha
+    };
     const loginResponse = this.usuarioService.login(loginRequest)
     loginResponse.subscribe({
       next: value => {
-        this.permissaoService.salvaToken(value.Token);
+        this.permissaoService.salvaToken(value.token);
         this.router.navigate(['/promessometro']);
       },
       error: value => {
