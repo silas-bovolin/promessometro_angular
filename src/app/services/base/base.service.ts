@@ -11,6 +11,15 @@ export class BaseService {
   constructor(protected http: HttpClient) {}
 
   _obterHeaderJson() {
+    let token = localStorage.getItem('token');
+    if (token) {
+      return  {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'bearer ' + token
+      })
+    }
+    }
     return  {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
