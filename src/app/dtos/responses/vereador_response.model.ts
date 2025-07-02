@@ -1,6 +1,6 @@
 export interface VereadorResponse {
     Nome: string;
     Partido: string;
-    ImagemBase64: string;
+    ImagemUrl: string;
     QuantidadeRequerimentosRejeitados: number;
 }

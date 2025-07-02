@@ -9,14 +9,14 @@
     
   <div class="chart-container">
     <div class="informacoes-gerais">
-      <div>Visão Geral dos Requerimentos</div>
-      <div>
+      <div class="subtitle">Visão Geral dos Requerimentos</div>
+      <div class="subtitle">
         Total de requerimentos: {{ qtdRequerimentosAceitos + qtdRequerimentosRejeitados }}
         ({{ qtdRequerimentosRejeitados }} rejetados, {{ qtdRequerimentosAceitos }} aceitos)
       </div>
     </div>
       
-    <div >
+    <div>
       <div>
         <ngx-charts-pie-chart
           [results]="chartData"
@@ -30,7 +30,7 @@
     </div>
   </div>
     
-  <h2 class="section-title">Vereadores</h2>
+  <h2 class="subtitle">Vereadores</h2>
     
   <div class="vereador-grid">
     <app-vereador

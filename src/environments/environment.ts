@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl: 'https://localhost:44383'
+    apiUrl: 'https://promessometrodotnet.onrender.com'
 }

@@ -17,21 +17,23 @@
 
 .subtitle {
   color: #e5f0f5;
-    font-size: 1.25rem;
-    margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
 }
-
+::ng-deep .legend-label-text {
+  color: #e5f0f5 !important;
+}
 .header{
   text-align: center;
 }
 
-  h1 {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0 0 1rem 0;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  }
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
 
 .chart-container {
   background-image: 
@@ -46,6 +48,7 @@
   box-shadow: 1px 1px rgba(103, 232, 249, 0.7);
   transition: box-shadow 0.6s linear;
 }
+
 .informacoes-gerais {
   padding-top: 20px;
   padding-left: 20px;

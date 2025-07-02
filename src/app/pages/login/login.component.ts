@@ -34,22 +34,22 @@ export class LoginComponent {
       return;
     }
     const request: LoginRequest = this.loginForm.value;
-    // const response = this.usuarioService.login(request);
-    // response.subscribe({
-    //   next: value => {
-    //     this.processarLogin(value.Token);
-    //   },
-    //   error: value => {
-    //     this.message = value.name;
-    //   }
-    // });
+    const response = this.usuarioService.login(request);
+    response.subscribe({
+      next: value => {
+        this.processarLogin(value.Token);
+      },
+      error: value => {
+        this.message = value.name;
+      }
+    });
 
-    if (request.email.toLowerCase()== 'adm@gmail.com' && request.senha == 'admin') {
-      this.processarLogin('X');
-    }
-    else {
-      this.message = 'E-mail ou senha incorretos';
-    }
+    // if (request.email.toLowerCase()== 'adm@gmail.com' && request.senha == 'admin') {
+    //   this.processarLogin('X');
+    // }
+    // else {
+    //   this.message = 'E-mail ou senha incorretos';
+    // }
   }
 
   informarErroForms() {

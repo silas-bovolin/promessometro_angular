@@ -1,13 +1,13 @@
 <div class="chart-container">
     <div class="image-container">
-      <img [src]="'data:image/jpeg;base64,' + vereador.ImagemBase64" [alt]="vereador.Nome" class="vereador-image">
+      <img [src]="vereador.ImagemUrl" [alt]="vereador.Nome" class="vereador-image">
     </div>
     
     <div class="center">
       <div>{{ vereador.Nome }}</div>
       <div>
         <div>{{ vereador.Partido }}</div>
-        <div class="blocked-count">
+        <div class="blocked-count letraAmarela">
           {{ vereador.QuantidadeRequerimentosRejeitados }} {{ vereador.QuantidadeRequerimentosRejeitados === 1 ? 'requerimento barrado' : 'requerimentos barrados' }}
         </div>
       </div>
