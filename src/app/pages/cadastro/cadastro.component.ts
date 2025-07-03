@@ -33,7 +33,7 @@ export class CadastroComponent {
       nome: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
       telefone: ["55", Validators.required],
-      senha: ["", [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/)]],
+      senha: ["", Validators.required],
       confirmarSenha: ["", Validators.required],
       aceitouOsTermos : [false]
     });
@@ -87,9 +87,10 @@ export class CadastroComponent {
       this.message = 'A senha e a confirmação de senha não são iguais';
       return false;
     }
-
-    if (this.cadastroForm.get('senha')?.errors?.['pattern']) {
-      this.message = 'A senha deve conter ao menos 8 caracteres, uma letra maiúscula, uma minúscula, um número e um caractere especial';
+    
+    let senha = this.cadastroForm.get('senha')?.value as string;
+    if (senha.length < 5) {
+      this.message = 'A senha deve conter ao menos 5 caracteres';
       return false;
     }
 
