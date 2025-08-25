@@ -13,6 +13,6 @@ export class PromessaService extends BaseService {
   constructor(http: HttpClient) { super(http); }
 
   getPromessas() : Observable<PromessaResponse[]> {
-    return this.http.get<PromessaResponse[]>('/promessa');
+    return this.get<PromessaResponse[]>('/promessa');
   }
 }
