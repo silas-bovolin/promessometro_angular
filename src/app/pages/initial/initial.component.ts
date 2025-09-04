@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { LoginComponent } from '../login/login.component';
-import { CadastroComponent } from '../cadastro/cadastro.component';
+import { LoginComponent } from '../../components/login/login.component';
+import { CadastroComponent } from '../../components/cadastro/cadastro.component';
 
 @Component({
   selector: 'app-initial',

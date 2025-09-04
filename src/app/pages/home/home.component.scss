@@ -1,0 +1,74 @@
+h1 {
+    color: white;
+    font-size: 48px;
+}
+p {
+    margin: 20px;
+    text-align: center;
+    color: #b0b8c1;
+    font-size: 20px;
+}
+.botoes-monitoramento {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-monitoramento {
+  background: #181f25;
+  border-radius: 16px;
+  box-shadow: 0 0 24px #00e5ff33;
+  padding: 2rem 1.5rem;
+  min-width: 320px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #00e5ff22;
+}
+
+.icon-monitoramento {
+  background: #222e36;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-monitoramento h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.5rem 0;
+  font-weight: bold;
+}
+
+.card-monitoramento p {
+  color: #e5f0f5;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-monitoramento {
+  background: #00e5ff;
+  color: #181f25;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 0;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 8px #00e5ff55;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.btn-monitoramento:hover {
+  background: #00bcd4;
+  color: #fff;
+}

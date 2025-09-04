@@ -25,7 +25,7 @@ export class AppComponent {
     this.router.events.pipe(
       filter((e): e is NavigationEnd => e instanceof NavigationEnd))
       .subscribe((ev: NavigationEnd) => {
-        this.showNavbar = !ev.url.endsWith('/');
+        this.showNavbar = !ev.url.endsWith('/') && !ev.url.endsWith('/home');
       });
     this.loading$ = this.loadingService.loading$;
   }

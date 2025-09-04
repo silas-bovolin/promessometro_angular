@@ -112,7 +112,7 @@ export class CadastroComponent {
     loginResponse.subscribe({
       next: value => {
         this.permissaoService.salvaToken(value.token);
-        this.router.navigate(['/promessometro']);
+        this.router.navigate(['/home']);
       },
       error: value => {
         this.message = value.name;

@@ -66,6 +66,6 @@ export class LoginComponent {
 
   processarLogin(token: string) {
     this.permissaoService.salvaToken(token);
-    this.router.navigate(['/promessometro']);
+    this.router.navigate(['/home']);
   }
 }
