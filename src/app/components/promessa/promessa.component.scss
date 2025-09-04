@@ -33,29 +33,6 @@
   cursor: pointer;
 }
 
-h3 {
-    color: white;
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin: 0 0 0.5rem 0;
-    animation: brilhoSuave 1s infinite alternate;
-  }
-  
-  p {
-    color: #67e8f9;
-    font-size: 0.875rem;
-    margin: 0;
-  }
-
-  @keyframes brilhoSuave {
-    from {
-      text-shadow: 0 0 4px #ffffff, 0 0 8px #00ffff;
-    }
-    to {
-      text-shadow: 0 0 12px #ffffff, 0 0 24px #00ffff;
-    }
-  }
-
 .promise-progress {
   text-align: right;
   display: flex;

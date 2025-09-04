@@ -3,4 +3,5 @@ export interface VereadorResponse {
     Partido: string;
     ImagemUrl: string;
     QuantidadeRequerimentosRejeitados: number;
+    QuantidadeRequerimentosAceitos: number;
 }

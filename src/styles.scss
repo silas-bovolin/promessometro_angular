@@ -41,3 +41,77 @@ h1 {
       text-shadow: 0 0 12px #00ffff;
     }
   }
+
+  
+
+h3 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    animation: brilhoSuave 1s infinite alternate;
+  }
+  
+  p {
+    color: #67e8f9;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  @keyframes brilhoSuave {
+    from {
+      text-shadow: 0 0 4px #ffffff, 0 0 8px #00ffff;
+    }
+    to {
+      text-shadow: 0 0 12px #ffffff, 0 0 24px #00ffff;
+    }
+  }
+
+  .subtitle {
+  color: #e5f0f5;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+}
+::ng-deep .legend-label-text {
+  color: #e5f0f5 !important;
+}
+
+.info-icon {
+    position: relative;
+  display: inline-block;
+  margin-left: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #eee;
+  color: #333;
+  text-align: center;
+  line-height: 22px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.custom-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 220px;
+  background: #222;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 10;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-size: 0.95rem;
+}
+
+.info-icon:hover .custom-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
